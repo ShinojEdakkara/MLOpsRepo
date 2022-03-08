@@ -70,7 +70,7 @@ def main():
         "--model_name",
         type=str,
         help="Name of the Model",
-        default="diabetes_model.pkl",
+        default="porto_seguro_safe_driver_model.pkl",
     )
 
     parser.add_argument(
