@@ -41,3 +41,4 @@ dependencies:
   - scikit-learn
   - numpy
   - lightgbm
+  - azureml-dataprep
