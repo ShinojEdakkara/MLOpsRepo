@@ -51,7 +51,13 @@ def main():
     
     
     # Read data from a file
-    data_df = pd.read_csv('porto_seguro_safe_driver_prediction_input.csv')
+    # data_df = pd.read_csv('porto_seguro_safe_driver_prediction_input.csv')
+
+    # Load the training data as dataframe
+    data_dir = "data"
+    data_file = os.path.join(data_dir, 'porto_seguro_safe_driver_prediction_input.csv')
+    data_df = pd.read_csv(data_file)
+
 
     # Hard code the parameters for training the model
     parameters = {
