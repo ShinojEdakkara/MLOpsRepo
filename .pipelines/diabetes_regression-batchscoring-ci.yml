@@ -13,7 +13,7 @@ pr: none
 resources:
   containers:
   - container: mlops
-    image: mcr.microsoft.com/mlops/python:latest
+    image: mcr.microsoft.com/mlops/python:openhack
   pipelines:
   - pipeline: model-train-ci
     source: Model-Train-Register-CI # Name of the triggering pipeline

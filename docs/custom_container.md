@@ -4,14 +4,14 @@ The Model training and deployment pipeline uses a Docker container
 on the Azure Pipelines agents to provide a reproducible environment
 to run test and deployment code.
  The image of the container
-`mcr.microsoft.com/mlops/python:latest` is built with this
+`mcr.microsoft.com/mlops/python:openhack` is built with this
 [Dockerfile](../environment_setup/Dockerfile).
 
 Additionally mcr.microsoft.com/mlops/python image is also tagged with below tags.
 
 | Image Tags                                      | Description                                                                               |
 | ----------------------------------------------- | :---------------------------------------------------------------------------------------- |
-| mcr.microsoft.com/mlops/python:latest           | latest image                                                                              |
+| mcr.microsoft.com/mlops/python:openhack           | latest image                                                                              |
 | mcr.microsoft.com/mlops/python:build-[id]       | where [id] is Azure Devops build id e.g.  mcr.microsoft.com/mlops/python:build-20200325.1 |
 | mcr.microsoft.com/mlops/python:amlsdk-[version] | where [version] is aml sdk version e.g.  mcr.microsoft.com/mlops/python:amlsdk-1.1.5.1    |
 | mcr.microsoft.com/mlops/python:release-[id]     | where [id] is github release id e.g.  mcr.microsoft.com/mlops/python:release-3.0.0        |  |
@@ -77,7 +77,7 @@ Modify the model pipeline file [diabetes_regression-ci.yml](../.pipelines/diabet
 resources:
   containers:
   - container: mlops
-    image: mcr.microsoft.com/mlops/python:latest
+    image: mcr.microsoft.com/mlops/python:openhack
 ```
 
 with (using the image name previously defined):
